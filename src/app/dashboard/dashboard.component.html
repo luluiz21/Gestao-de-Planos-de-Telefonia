@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <h2>Dashboard</h2>
+  <div class="row">
+    <div class="col-md-6 col-sm-12" *ngFor="let card of cards">
+      <mat-card class="mb-3 p-2">
+        <mat-card-title>{{ card.title }}</mat-card-title>
+        <mat-card-content>
+          <h3>{{ card.value }}</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf=" this.pieChartData?.labels?.length" class="col-sm-12 col-md-6">
+      <canvas baseChart 
+      [data]="pieChartData" 
+      [options]="pieChartOptions" 
+      [type]="pieChartType"> </canvas>
+    </div>
+    <div class="col-sm-12 col-md-6" *ngIf=" this.barChartData?.labels?.length">
+      <canvas
+        baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [type]="barChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

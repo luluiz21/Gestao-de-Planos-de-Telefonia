@@ -1,0 +1,11 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="pb-2">
+  <mat-form-field appearance="fill" class="w-100" *ngFor="let field of fields">
+    <mat-label>{{ field.label }}</mat-label>
+    <input matInput [formControlName]="field.key" [type]="field.type || 'text'">
+  </mat-form-field>
+  <div class="mt-2">
+    <button mat-flat-button color="primary" type="submit" [disabled]="formGroup.invalid">
+      {{ submitLabel }}
+    </button>
+  </div>
+</form>

@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2>Gerenciamento de Clientes</h2>
+  <button mat-raised-button color="primary" (click)="openClientDialog()">Adicionar Cliente</button>
+  <app-shared-table 
+    [data]="clients" 
+    [columns]="clientColumns" 
+    (edit)="editClient($event)" 
+    (delete)="deleteClient($event)">
+  </app-shared-table>
+</div>
+
+<ng-template #clientDialog >
+  <h2 mat-dialog-title>{{ selectedClient ? 'Editar Cliente' : 'Adicionar Cliente' }}</h2>
+  <div mat-dialog-content >
+    <app-shared-form 
+      [formGroup]="clientForm" 
+      [fields]="clientFields" 
+      submitLabel="{{ selectedClient ? 'Atualizar' : 'Salvar' }}"
+      (submitForm)="saveClient($event)">
+    </app-shared-form>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancelar</button>
+  </div>
+</ng-template>

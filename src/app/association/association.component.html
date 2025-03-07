@@ -1,0 +1,65 @@
+<div class="container mt-4">
+  <h2>Associação de Clientes a Planos</h2>
+  <div class="row">
+    <div class="col-md-6 p-1">
+      <div 
+        cdkDropList 
+        id="availablePlans" 
+        [cdkDropListConnectedTo]="dropListIdsPlans" 
+        [cdkDropListData]="availablePlans" 
+        (cdkDropListDropped)="onAvailablePlansDrop($event)" 
+        class="list-group">
+        <div *ngFor="let plan of availablePlans" 
+             cdkDrag 
+             [cdkDragData]="plan" 
+             class="list-group-item">
+          {{ plan.name }} ({{ plan.price | currency:'BRL':'symbol':'1.2-2' }})
+        </div>
+      </div>
+      
+    </div>
+    <div 
+        [ngClass]="{'trash-visibility' : !isDraggingClientPlan}"
+        cdkDropList 
+        id="trash" 
+        [cdkDropListConnectedTo]="dropListIdsCLients" 
+        [cdkDropListData]="[]" 
+        (cdkDropListDropped)="onTrashDrop($event)" 
+        class="trash-area col-md-6">
+        <p>Drop here to disassociate plan</p>
+        <span><mat-icon>delete</mat-icon></span>
+      </div>
+  </div>
+
+  <div class = "row">
+    <div *ngFor="let clientData of clientsWithPlans" class="col-md-3 p-1 mb-3">
+      <div class="card ">
+        <div class="card-header">
+          {{ clientData.client.name }}
+        </div>
+        <div class="card-body">
+          <div 
+            cdkDropList 
+            [id]="'client-' + clientData.client.id" 
+            [cdkDropListConnectedTo]="dropListIdsCLients" 
+            [cdkDropListData]="clientData.assignedPlans" 
+            (cdkDropListDropped)="onClientDrop($event, clientData)" 
+            class="list-group">
+            <div *ngIf="clientData.assignedPlans.length === 0" class="empty-drop">
+              Arraste o plano aqui para associar
+            </div>
+            <div *ngFor="let item of clientData.assignedPlans" 
+                  cdkDrag 
+                  [cdkDragData]="item.plan" 
+                  (cdkDragStarted)="onDragClientPlan()"
+                  class="list-group-item">
+              {{ item.plan.name }} ({{ item.plan.price | currency:'BRL':'symbol':'1.2-2' }})
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</div>

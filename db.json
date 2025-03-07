@@ -1,0 +1,191 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "cpf": "123.456.789-00",
+      "phone": "555-0101",
+      "email": "john@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "cpf": "987.654.321-00",
+      "phone": "555-0202",
+      "email": "jane@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "cpf": "111.222.333-44",
+      "phone": "555-0303",
+      "email": "alice@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Bob Brown",
+      "cpf": "555.666.777-88",
+      "phone": "555-0404",
+      "email": "bob@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Charlie Davis",
+      "cpf": "222.333.444-55",
+      "phone": "555-0505",
+      "email": "charlie@example.com"
+    },
+    {
+      "id": "6",
+      "name": "Diana Prince",
+      "cpf": "333.444.555-66",
+      "phone": "555-0606",
+      "email": "diana@example.com"
+    },
+    {
+      "id": "7",
+      "name": "Bruce Wayne",
+      "cpf": "444.555.666-77",
+      "phone": "555-0707",
+      "email": "bruce@example.com"
+    },
+    {
+      "id": "8",
+      "name": "Clark Kent",
+      "cpf": "555.666.777-88",
+      "phone": "555-0808",
+      "email": "clark@example.com"
+    },
+    {
+      "id": "9",
+      "name": "Peter Parker",
+      "cpf": "666.777.888-99",
+      "phone": "555-0909",
+      "email": "peter@example.com"
+    },
+    {
+      "id": "10",
+      "name": "Tony Stark",
+      "cpf": "777.888.999-00",
+      "phone": "555-1010",
+      "email": "tony@example.com"
+    }
+  ],
+  "plans": [
+    {
+      "id": "1",
+      "name": "Plano Básico",
+      "price": 29.99,
+      "dataAllowance": 5,
+      "voiceMinutes": 100
+    },
+    {
+      "id": "2",
+      "name": "Plano Standard",
+      "price": 39.99,
+      "dataAllowance": 10,
+      "voiceMinutes": 200
+    },
+    {
+      "id": "3",
+      "name": "Plano Premium",
+      "price": 59.99,
+      "dataAllowance": 20,
+      "voiceMinutes": 500
+    },
+    {
+      "id": "4",
+      "name": "Plano Ilimitado",
+      "price": 79.99,
+      "dataAllowance": 50,
+      "voiceMinutes": 1000
+    }
+  ],
+  "clientPlans": [
+    {
+      "id": "5",
+      "clientId": "4",
+      "planId": "1"
+    },
+    {
+      "id": "7",
+      "clientId": "5",
+      "planId": "3"
+    },
+    {
+      "id": "8",
+      "clientId": "5",
+      "planId": "4"
+    },
+    {
+      "id": "9",
+      "clientId": "6",
+      "planId": "1"
+    },
+    {
+      "id": "10",
+      "clientId": "6",
+      "planId": "2"
+    },
+    {
+      "id": "11",
+      "clientId": "7",
+      "planId": "3"
+    },
+    {
+      "id": "12",
+      "clientId": "8",
+      "planId": "2"
+    },
+    {
+      "id": "13",
+      "clientId": "8",
+      "planId": "3"
+    },
+    {
+      "id": "14",
+      "clientId": "9",
+      "planId": "4"
+    },
+    {
+      "id": "15",
+      "clientId": "10",
+      "planId": "1"
+    },
+    {
+      "id": "16",
+      "clientId": "10",
+      "planId": "3"
+    },
+    {
+      "id": "3b5f",
+      "clientId": "1",
+      "planId": "1"
+    },
+    {
+      "id": "d5b6",
+      "clientId": "10",
+      "planId": "4"
+    },
+    {
+      "id": "e0f4",
+      "clientId": "3",
+      "planId": "1"
+    },
+    {
+      "id": "3c14",
+      "clientId": "2",
+      "planId": "3"
+    },
+    {
+      "id": "d5b7",
+      "clientId": "1",
+      "planId": "3"
+    },
+    {
+      "id": "9199",
+      "clientId": "2",
+      "planId": "2"
+    }
+  ]
+}
